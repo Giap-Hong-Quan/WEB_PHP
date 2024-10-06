@@ -235,10 +235,10 @@ ul.navbar_list_brand li.item_product:nth-child(2){
 
 /* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; /* Stay in place */
+    /* display: none;  */
+    position: fixed; 
    
-    padding-top: 100px; /* Location of the box */
+    padding-top: 100px; 
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -255,7 +255,7 @@ ul.navbar_list_brand li.item_product:nth-child(2){
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
   }
   
   /* The Close Button */
@@ -272,3 +272,46 @@ ul.navbar_list_brand li.item_product:nth-child(2){
     text-decoration: none;
     cursor: pointer;
   }
+.modal_item{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 2rem;
+   align-items: center;
+}
+  .modal_img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .modal_heading{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+  }
+  .modal_name,.modal_email{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 2rem 0;
+  }
+.btn_admin{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    display: inline;
+    background-color: green;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 1rem;
+}
+.btn_logout{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    display: inline;
+    background-color: blue;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    
+}

@@ -85,15 +85,33 @@
                     
                 </div>
                 <div class="avatar">
-                    <a class="avatar" href="">
+                    <a id="myBtn" class="avatar" href="">
                         <img src="../../../thuedo/template/img/avatar.png" alt="">
                     </a>
-                    <ul class="avatar_user">
-                        <li><a href="">Thông tin của tôi</a></li>
-                        <li><a href="">Đăng xuất</a></li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
         
+
+
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <div class="modal_item">
+    <img class="modal_img" src="../../../thuedo/template/img/dongho.jpg" alt="">
+    <div class="modal_info">
+        <h2 class="modal_heading">Thông tin của tôi</h2>
+        <div class="modal_name">Tên:</div>
+        <div class="modal_email">Email:</div>
+        <a class="btn_admin" href="">ADMIN</a>
+        <a class="btn_logout" href="">Đăng xuất</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
 </header>
