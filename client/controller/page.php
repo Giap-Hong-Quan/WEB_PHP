@@ -51,6 +51,7 @@ if(isset($act)){
                 $id_user=$filterAll['id_user'];
                 $id_brand=$filterAll['id_brand'];
                 $id_category=$filterAll['id_category'];
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                
                $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
                $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
@@ -138,8 +139,8 @@ if(isset($act)){
                 $filterAll=filter();
                 $id_user=$filterAll['id_user'];
                 $search=$filterAll['search'];
-
-                echo $search;
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
+               
 
                 $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
                 $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
@@ -175,6 +176,22 @@ if(isset($act)){
             require_once 'view/footer.php';
             layouts('footer_page','','brand');
             break;
+        case "detail":
+            if(isGet()){
+                $filterAll=filter();
+                $id_user=$filterAll['id_user'];
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
+                $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
+                $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
+            }
+
+
+            $data=['title'=>'Chi tiết sản phẩm'];
+            layouts('header_page',$data,'detail');
+            require_once 'view/header.php';
+            require_once 'view/detail.php';
+            require_once 'view/footer.php';
+            layouts('footer_page','','detail');
     }
 }
 

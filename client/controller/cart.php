@@ -8,6 +8,7 @@ if(isset($act)){
                 $id_user=$filterAll['id_user'];
                 $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
                 $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                 
             }
             $data=['title'=>'Giỏ hàng'];
@@ -26,6 +27,7 @@ if(isset($act)){
                 $sqlSelectImage_path=oneRaw("SELECT image FROM image_path WHERE id_product='$id_product' LIMIT 1");
                 $sqlSelectIdCart = getRows("SELECT * FROM cart WHERE id_product='$id_product' AND id_user='$id_user'");
                 $sqlSelectQuantityCart=oneRaw("SELECT quantity FROM cart WHERE id_product='$id_product' AND id_user='$id_user'");
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                 if($sqlSelectIdCart>0){
                     $data=[
                         'quantity'=>$sqlSelectQuantityCart['quantity']+=1
@@ -52,6 +54,7 @@ if(isset($act)){
                 $id_product=$filterAll['id_product'];
                 $id_user=$filterAll['id_user'];
                 $sqlSelectIdCart = oneRaw("SELECT * FROM cart WHERE id='$id_product' AND id_user='$id_user'");
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                 $data=[
                     'quantity'=>$sqlSelectIdCart['quantity']-=1
                 ];
@@ -65,6 +68,7 @@ if(isset($act)){
                 $id_product=$filterAll['id_product'];
                 $id_user=$filterAll['id_user'];
                 $sqlSelectIdCart = oneRaw("SELECT * FROM cart WHERE id='$id_product' AND id_user='$id_user'");
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                 $data=[
                     'quantity'=>$sqlSelectIdCart['quantity']+=1
                 ];
@@ -77,6 +81,7 @@ if(isset($act)){
                 $filterAll=filter();
                 $id_product=$filterAll['id_product'];
                 $id_user=$filterAll['id_user'];
+                $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                 $sqlSelectIdCart = oneRaw("SELECT * FROM cart WHERE id='$id_product' AND id_user='$id_user'");
                 delete('cart',"id='$id_product' AND id_user='$id_user'");
             }

@@ -92,19 +92,17 @@
             </div>
             <div class="footer__icon">
                 <a class="footer__icon--link footer__icon--link-fb" href="">
-                    <img class="footer__img" src="./assets/icon/fb.svg" alt="">
+                    <img class="footer__img" src="../../../thuedo/template/icon/fb.svg" alt="">
                 </a>
                 <a class="footer__icon--link footer__icon--link-youtube" href="">
-                    <img class=" footer__img" src="./assets/icon/youtube.svg" alt="">
+                    <img class=" footer__img" src="../../../thuedo/template/icon/youtube.svg" alt="">
                 </a>
                 <a class="footer__icon--link footer__icon--link-tiktok" href="">
-                    <img class="footer__img" src="./assets/icon/tiktok.svg" alt="">
+                    <img class="footer__img" src="../../../thuedo/template/icon/tiktok.svg" alt="">
                 </a>
-                <a class="footer__icon--link footer__icon--link-twitter" href="">
-                    <img class="footer__img" src="./assets/icon/twitter.svg" alt="">
-                </a>
+               
                 <a class="footer__icon--link footer__icon--link-linkedin-in" href="">
-                    <img class="footer__img" src="./assets/icon/linkedin-in.svg" alt="">
+                    <img class="footer__img" src="../../../thuedo/template/icon/linnkedin_in.svg" alt="">
                 </a>
     
             </div>

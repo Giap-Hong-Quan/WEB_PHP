@@ -5,7 +5,7 @@
                     <nav class="navbar">
                         <ul class="navbar_list" >
                             <li><a  href="?mod=page&act=dashboard&id=<?php echo $id_user?>">Trang chủ</a></li>
-                            <li class="navbar_brand"><a  href="#">Brand <img  src="../../../thuedo/template/icon/down.svg" alt=""></a>
+                            <li class="navbar_brand"><a  href="#">Thương hiệu <img  src="../../../thuedo/template/icon/down.svg" alt=""></a>
                                 <ul class="navbar_list_brand" >
                                     <li class="navbar_item_brand"><a href="?mod=page&act=product&id_brand=1&id_user=<?php echo $id_user?>">Dior</a>
                                         <ul class="list_product_brand">
@@ -36,7 +36,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="navbar_product" ><a  href="#">Sản phẩm <img  src="../../../thuedo/template/icon/down.svg" alt=""></a>
+                            <li class="navbar_product" ><a  href="#">Danh mục <img  src="../../../thuedo/template/icon/down.svg" alt=""></a>
                                 <ul class="navbar_list_product">
                                     <li><a href="?mod=page&act=product&id_category=1&id_user=<?php echo $id_user?>">Thời trang</a></li>
                                     <li><a href="?mod=page&act=product&id_category=2&id_user=<?php echo $id_user?>">Nước hoa</a></li>
@@ -89,12 +89,9 @@
                         <?php
                         if($sqlUser):
                         ?>
-                        <img src="../../../thuedo/template/img/<?php echo !empty($sqlUser['avatar'])?$sqlUser['avatar']:'avatar.png'?>" alt="">
+                        <img id="myBtn" src="../../../thuedo/template/img/<?php echo !empty($sqlUser['avatar'])?$sqlUser['avatar']:'avatar.png'?>" alt="">
                     </a>
-                    <ul class="avatar_user">
-                        <li><a id="myBtn" href="">Thông tin của tôi</a></li>
-                        <li><a href="">Đăng xuất</a></li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
@@ -112,7 +109,7 @@
         <h2 class="modal_heading">Thông tin của tôi</h2>
         <div class="modal_name">Tên:<?php echo $sqlUser['name']?></div>
         <div class="modal_email">Email:<?php echo $sqlUser['email']?></div>
-        <a class="btn_admin" href=""><?php echo ($sqlUser['admin']==1)?'ADMIN':''?></a>
+        <a class="btn_admin" href="../../../thuedo/admin/?mod=home&act=dashboard"><?php echo ($sqlUser['admin']==1)?'ADMIN':''?></a>
         <a class="btn_logout" href="">Đăng xuất</a>
     </div>
   </div>

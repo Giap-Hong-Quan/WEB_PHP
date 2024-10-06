@@ -7,13 +7,16 @@
 
     <main>
         <div class="container">
+       
             <div class="banner">
-                    <img class="banner1" src="../../../thuedo/template/img/banner1.jpg" alt="">
+                <img class="banner1" src="../../../thuedo/template/img/banner1.png" alt="">
+                <img class="banner1" src="../../../thuedo/template/img/banner2.png" alt="">
+                <img class="banner1" src="../../../thuedo/template/img/banner3.png" alt="">
             </div>
 
 
             <section class="home__container">   
-                <h2 class="home__heading">Brand</h2>
+                <h2 class="home__heading">Thương hiệu</h2>
                
                 <div class="home__brand">
                     <!-- categories item1 -->
@@ -38,7 +41,7 @@
             </section>
 
             <section class="home__container">
-                <h2 class="home__heading">Sản phẩm best-seller</h2>
+                <h2 class="home__heading">Sản phẩm bán chạy</h2>
                 <div class="hom_product_hot">
                     <button class="prev"><img src="../../../thuedo/template/icon/prev.svg" alt=""></button>
                     <button class="next"><img src="../../../thuedo/template/icon/next.svg" alt=""></button>
@@ -48,12 +51,12 @@
                     ?>
                     <article class="product__item">
                         <div class="product__item-img-wrap">
-                            <a href="product-page.html#!">
+                            <a href="?mod=page&act=detail&id_user=<?php echo $id_user?>">
                                 <img src="../../../thuedo/template/img/<?php echo $item['image']?reset($item['image']):''?>" alt="" class="product__item-img">
                             </a>
                         </div>
                         <h3 class="product__item-heading">
-                            <a href="product-page.html#!"><?php echo $item['name'];?></a>
+                            <a href="?mod=page&act=detail&id_user=<?php echo $id_user?>"><?php echo $item['name'];?></a>
                         </h3>
                         <span class="product__item-brand"><?php
                                 if($item['id_brand']==1){
@@ -101,7 +104,7 @@
 
 
             <section class="home__container">
-                <div class="home__heading">Shop By Category</div>
+                <div class="home__heading">Danh mục sản phẩm</div>
                 <div class="home__caterogy">
                 <?php
                 if(!empty($sqlListCategory)):

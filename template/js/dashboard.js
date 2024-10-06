@@ -2,6 +2,7 @@
 
 const container = document.querySelector('.hom_product_hot');
 const hotItems = document.querySelectorAll('.product__item');
+console.log(container)
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
