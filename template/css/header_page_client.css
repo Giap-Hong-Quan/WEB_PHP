@@ -99,6 +99,8 @@ header{
 .avatar img{
     width: 5rem;
     height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .cart img{
     width: 3.5rem;
@@ -235,9 +237,8 @@ ul.navbar_list_brand li.item_product:nth-child(2){
 
 /* The Modal (background) */
 .modal {
-    /* display: none;  */
+    display: none; 
     position: fixed; 
-   
     padding-top: 100px; 
     left: 0;
     top: 0;

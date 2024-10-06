@@ -85,14 +85,21 @@
                     
                 </div>
                 <div class="avatar">
-                    <a id="myBtn" class="avatar" href="">
-                        <img src="../../../thuedo/template/img/avatar.png" alt="">
+                    <a class="avatar" href="">
+                        <?php
+                        if($sqlUser):
+                        ?>
+                        <img src="../../../thuedo/template/img/<?php echo !empty($sqlUser['avatar'])?$sqlUser['avatar']:'avatar.png'?>" alt="">
                     </a>
-                    
+                    <ul class="avatar_user">
+                        <li><a id="myBtn" href="">Thông tin của tôi</a></li>
+                        <li><a href="">Đăng xuất</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         
+
 
 
 <div id="myModal" class="modal">
@@ -100,18 +107,19 @@
 <div class="modal-content">
   <span class="close">&times;</span>
   <div class="modal_item">
-    <img class="modal_img" src="../../../thuedo/template/img/dongho.jpg" alt="">
+    <img class="modal_img" src="../../../thuedo/template/img/<?php echo !empty($sqlUser['avatar'])?$sqlUser['avatar']:'avatar.png'?>" alt="">
     <div class="modal_info">
         <h2 class="modal_heading">Thông tin của tôi</h2>
-        <div class="modal_name">Tên:</div>
-        <div class="modal_email">Email:</div>
-        <a class="btn_admin" href="">ADMIN</a>
+        <div class="modal_name">Tên:<?php echo $sqlUser['name']?></div>
+        <div class="modal_email">Email:<?php echo $sqlUser['email']?></div>
+        <a class="btn_admin" href=""><?php echo ($sqlUser['admin']==1)?'ADMIN':''?></a>
         <a class="btn_logout" href="">Đăng xuất</a>
     </div>
   </div>
 </div>
 
 </div>
-
-
+<?php
+endif;
+?>
 </header>

@@ -10,6 +10,7 @@ if(isset($act)){
                 $id_user=$filterAll['id'];
                $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
                $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
+               $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
             }
             $productHot=[];
             foreach($sqlListHot as $item){
