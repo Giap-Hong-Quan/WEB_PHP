@@ -141,7 +141,7 @@ if(isset($act)){
                 $search=$filterAll['search'];
                 $sqlUser=oneRaw("SELECT * FROM user WHERE id=$id_user");
                
-
+                
                 $sqlSelectCart=getRaw("SELECT * FROM cart WHERE id_user='$id_user' ORDER BY id ASC");
                 $sqlCountCart=getRows("SELECT * FROM cart WHERE id_user='$id_user'");
                 $sqlProductSearch=getRaw("SELECT product.*,image_path.image FROM product INNER JOIN image_path ON product.id=image_path.id_product WHERE name LIKE '%$search%' ORDER BY product.id ASC ");

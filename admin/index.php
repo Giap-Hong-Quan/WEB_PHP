@@ -3,8 +3,8 @@
 
  if(isset($mod)){
     switch($mod){
-        case 'home':
-            require_once 'controller/home.php';
+        case 'product':
+            require_once 'controller/product.php';
     }
  }
 ?>

@@ -1,0 +1,139 @@
+#toast{
+    position: fixed;
+    top:30px;
+    right: 30px;
+}
+.toast_success,.toast_error{
+    display:flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 500px;
+    height: 100px;
+    justify-content: start;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+    animation: identifier ease .3s;
+}
+.toast_success{
+    border-left: 4px solid green;
+}
+.toast_error{
+    border-left: 4px solid red;
+}
+.toast_icon{
+    font-size: 24px;
+  
+    margin-left: 10px;
+}
+.toast_success .toast_icon{
+    color: green;
+}
+.toast_error .toast_icon{
+    color: red;
+}
+.toast_close{
+    padding: 0 16px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-left: auto;
+}
+.toast_body{
+    margin-left: 10px;
+}
+.toast_msg{
+    width: 100%;
+}
+@keyframes identifier {
+    from{
+        transform: translateX(calc(100% + 30px));
+    }to{
+        transform: translateX(0);
+    }
+}
+
+
+.admin_body {
+    padding: 20px;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+
+.admin_body h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.admin_body a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color:rgb(15, 109, 223);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.admin_body a:hover {
+    background-color: #1bce38;
+  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 1.6rem;
+}
+
+tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    font-size: 1.6rem;
+}
+
+tbody tr:hover {
+    background-color: #c9c3c3;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+tbody td img {
+    display: inline-block;
+flex-wrap: wrap;
+}
+
+td a {
+    margin-right: 10px;
+}
+
+td a:hover {
+    opacity: 0.7;
+}
+
+td a img {
+    width: 2rem;
+    height: 2rem;
+}
+td a:nth-of-type(2){
+    background-color: red;
+}
+td a:nth-of-type(2):hover{
+    background-color: rgb(105, 15, 15);
+}

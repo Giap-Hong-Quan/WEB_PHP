@@ -26,7 +26,7 @@
                     ?>
                         <a href="product-page.html">
                             <article class="brand__item">
-                             <img src="../../../thuedo/template/img/<?php echo $item['image']?>" alt="sp1" class="cate__item-img">
+                             <img src="../template/img/<?php echo $item['image']?>" alt="sp1" class="cate__item-img">
                              <section class="brand__item-info">
                                  <h3 class=" brand__item-heading"><?php echo $item['name']?></h3>
                                  <span class="brand__item-desc"><?php echo $item['depcription']?></span>
@@ -43,8 +43,8 @@
             <section class="home__container">
                 <h2 class="home__heading">Sản phẩm bán chạy</h2>
                 <div class="hom_product_hot">
-                    <button class="prev"><img src="../../../thuedo/template/icon/prev.svg" alt=""></button>
-                    <button class="next"><img src="../../../thuedo/template/icon/next.svg" alt=""></button>
+                    <button class="prev"><img src="../template/icon/prev.svg" alt=""></button>
+                    <button class="next"><img src="../template/icon/next.svg" alt=""></button>
                     <?php
                     if(!empty($productHot)):
                         foreach($productHot as $item):
@@ -52,7 +52,7 @@
                     <article class="product__item">
                         <div class="product__item-img-wrap">
                             <a href="?mod=page&act=detail&id_user=<?php echo $id_user?>">
-                                <img src="../../../thuedo/template/img/<?php echo $item['image']?reset($item['image']):''?>" alt="" class="product__item-img">
+                                <img src="../template/img/<?php echo $item['image']?reset($item['image']):''?>" alt="" class="product__item-img">
                             </a>
                         </div>
                         <h3 class="product__item-heading">
@@ -112,7 +112,7 @@
                 ?>
                     <a href="product-page.html">
                         <article class="category__item">
-                            <img class="category__img" src="../../../thuedo/template/img/<?php echo $item['image']?>" alt="">
+                            <img class="category__img" src="../template/img/<?php echo $item['image']?>" alt="">
                             <h3 class="category_heading"><?php echo $item['name']?></h3>
                         </article>
                     </a>            
@@ -131,7 +131,7 @@
                     <a class="introduce_btn" href="">SHOP NOW</a>
                 </div>
                 <div class="introduce_video">
-                    <video controls class="video" src="../../../thuedo/template/video/videogucci.mp4"></video>
+                    <video controls class="video" src="../template/video/videogucci.mp4"></video>
                 </div>
               </div>
             </section>

@@ -10,7 +10,7 @@
                     <article class="product__item">
                         <div class="product__item-img-wrap">
                             <a href="product-page.html#!">
-                                <img src="../../../thuedo/template/img/<?php echo $item['image']?reset($item['image']):''?>" alt="" class="product__item-img">
+                                <img src="../template/img/<?php echo $item['image']?reset($item['image']):''?>" alt="" class="product__item-img">
                             </a>
                         </div>
                         <h3 class="product__item-heading">
