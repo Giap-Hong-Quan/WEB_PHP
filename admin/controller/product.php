@@ -7,7 +7,7 @@ if(isset($act)){
             $data=['title'=>'Quản lý sản phẩm'];
             layouts('header_admin',$data,'product_admin_list');
             require_once 'view/header_admin.php';
-            require_once 'view/product_list.php';
+            require_once 'view/product_list.php';   
             require_once 'view/footer_admin.php';
             layouts('footer_admin','','product_admin');
             break;
