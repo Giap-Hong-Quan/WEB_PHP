@@ -3,7 +3,7 @@
         <?php echo isset($smg)?$smg:''?>
     </div>
     
-    <h1>login</h1>
+    <h1>Đăng nhập</h1>
 <form action="" enctype="multipart/form-data" method="post">
         
         <div class="form_group">
@@ -19,8 +19,10 @@
        
         <button type="submit">Đăng Nhập</button>
     </form>
-    <div>
-        <span><a href="?mod=user&act=register">Đăng ký</a></span>
-    </div>
+    
+    <div class="">
+                    <p class="">Chưa có tài khoản? <a href="?mod=user&act=register"
+                            class="text-primary fw-bold">Đăng ký</a></p>
+                </div>
 
 

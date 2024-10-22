@@ -2,7 +2,7 @@
 if(isset($act)){
     switch($act){
         case 'list':
-            $sqlProduct=getRaw("SELECT * FROM product ORDER BY id ASC");
+            $sqlProduct = getRaw("SELECT * FROM product WHERE is_active = 1 ORDER BY id ASC");
             $sqlImage_path=getRaw("SELECT * FROM image_path ORDER BY id ASC");
             $data=['title'=>'Quản lý sản phẩm'];
             layouts('header_admin',$data,'product_admin_list');
@@ -23,6 +23,7 @@ if(isset($act)){
                     'quantity'=>$filterAll['quantity'],
                     'hot'=>$filterAll['hot'],
                     'status'=>$filterAll['status'],
+                    'is_active'=>1
                 ];
                 $sqlInsertProduct=insert('product',$data);
                 $id_product = $connect->lastInsertId();
@@ -62,21 +63,29 @@ if(isset($act)){
             layouts('footer_admin','','product_admin');
             break;
         case 'delete':
+           
             if(isGet()){
                 $filterAll=filter();
                 $id_product=$filterAll['id_product'];
+              
                 $sqlDeleteImage=delete('image_path',"id_product='$id_product'");
-                $sqlDeleteProduct=delete('product',"id='$id_product'");
-                if(isset($sqlDeleteImage)&&isset($sqlDeleteImage)){
-                    redirect('?mod=product&act=list');
+                    $data=[
+                        'is_active'=>0,
+                    ];
+                    echo "<pre>";
+                    print_r($data);
+                    echo "</pre>";
+                    $sqlDeleteProduct=update('product',$data,"id='$id_product'");
+                    if(isset($sqlDeleteImage)&&isset($sqlDeleteProduct)){
+                        redirect('?mod=product&act=list');
+                    }
                 }
-            }
             break;
         case 'update':
             $filterAll=filter();
             $id_product=$filterAll['id_product'];
             delete('image_path',"id_product='$id_product'");
-            echo $id_product;
+           
             if(isPost()){
                 $data=[
                     'name'=>$filterAll['name'],
@@ -110,9 +119,11 @@ if(isset($act)){
                     }
                    
                 }
-                if(isset($sqlInsertProduct)){
+                if(isset($sqlUpdateProduct)){
+
                     redirect('?mod=product&act=list');
                 }
+                
             }
             $data=['title'=>'Sửa sản phẩm'];
             layouts('header_admin',$data,'product_admin_add');

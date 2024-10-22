@@ -56,7 +56,7 @@
                             </a>
                         </div>
                         <h3 class="product__item-heading">
-                            <a href="?mod=page&act=detail&id_user=<?php echo $id_user?>"><?php echo $item['name'];?></a>
+                            <a href="?mod=page&act=detail&id_product=<?php echo $item['id']?>&id_user=<?php echo $id_user?>"><?php echo $item['name'];?></a>
                         </h3>
                         <span class="product__item-brand"><?php
                                 if($item['id_brand']==1){

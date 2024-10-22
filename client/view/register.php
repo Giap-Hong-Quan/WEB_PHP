@@ -4,7 +4,7 @@
     </div>
     
 
-<h1>register</h1>
+<h1>Đăng ký</h1>
 <form action="" enctype="multipart/form-data" method="post">
         <div class="form_group">
             <label class="label" for="name">Họ Và Tên</label>
@@ -42,8 +42,7 @@
         <button type="submit">Đăng ký</button>
 
     </form>
-    <div class="">
-                    <p class="">Chưa có tài khoản? <a href="?mod=user&act=login"
-                            class="text-primary fw-bold">Đăng Nhập</a></p>
-                </div>
+    <div>
+        <span><a href="?mod=user&act=login">Đăng nhập</a></span>
+    </div>
 
