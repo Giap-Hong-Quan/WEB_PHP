@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: "DM Sans";
+}
+body{
+    background-color: #f6f6f6;
+}
+.container{
+    margin: 0 15rem;
+}
+.admin{
+display: flex;
+height: 100vh;
+}
+.admin_list{
+    flex: 2;
+    background-color: #ccc;
+   
+   
+    
+}
+.admin_logo{
+    width: 10rem;
+}
+.admin_list p{
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: 3rem;
+}
+.admin_list p a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+.admin_header{
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    background-color: rgb(211, 65, 65);
+    justify-content:space-between;
+}
+.admin_con{
+    width: 4rem;
+    height: 4rem;
+  
+}
+.admin_content{
+    flex: 8;
+}
+.admin_user{
+    display: flex;
+    margin-right: 1rem;
+    gap: 2rem;
+}
+
+.admin_header p{
+    font-size: 3rem;
+    color: #fff;
+}
+
+footer{
+    background-color: rgb(211, 65, 65);
+    height: 4rem;
+}
+footer p{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}

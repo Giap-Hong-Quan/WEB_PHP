@@ -1,0 +1,53 @@
+
+    form {
+        width: 100%;
+      
+        margin: 0 auto;
+    }
+    
+   
+    .admin_body_row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+
+    .admin_body_col {
+        flex: 1 1 48%;
+    }
+    
+    
+    .admin_body_col div {
+        margin-bottom: 1.5rem;
+    }
+    
+
+    input[type="text"], 
+    input[type="number"], 
+    textarea, 
+    select, 
+    .form-control {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: .5rem;
+        box-sizing: border-box;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    input[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .form-label{
+        font-size: 1.8rem;
+    }

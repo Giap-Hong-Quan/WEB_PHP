@@ -1,0 +1,136 @@
+.container {
+    margin: 0 150px;
+  }
+  main{
+    margin-top:10.01rem;
+  }
+  .detail{
+    display: flex;
+    padding: 5rem 0;
+    
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem
+  }
+  .detail_img{
+    flex: 3;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .detail_img_main{
+    width: 100%;
+  }
+  .detail_img_main img{
+  width: 100%;
+  box-shadow: 5px 10px 10px #ccc;
+  }
+  .detail_img_extra{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .detail_img_extra img {
+   width: calc(100% /5);
+    height: calc(100% /5);
+    object-fit: cover;
+  
+  }
+  .detail_content{
+    flex: 7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .prev,.next{
+    position:absolute;
+    z-index: 1;
+    bottom: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transform: translateY(50%);
+    cursor: pointer;
+    width: 10%;
+  }
+  .next{
+    right: -4px;
+  }
+  .prev{
+    left: -4px;
+  }
+  .next img,.prev img {
+    width: 100%;
+  }
+  
+  .detail_content_product,.detail_content_ship{
+    display: flex;
+    
+    flex-direction: column;
+  }
+  .detail_content_product_brand{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  .detail_content_product_name{
+    font-size: 2.5rem;
+  
+    margin-bottom: 2rem;
+    width: 50rem;
+    line-height: 3rem;
+  }
+  .detail_content_product_ma,
+  .detail_content_product_sale,
+  .detail_content_product_time,
+  .detail_content_product_ship,
+  .detail_content_product_price{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .detail_content_product_price{
+    color: red;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .btn_cart{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background-color: #000;
+    font-size: 2rem;
+    color: #fff;
+    
+  }
+  .detail_content_ship {
+    /* Các thuộc tính chung cho phần tử cha */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  
+  .detail_content_ship_item{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .btn_home {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px ;
+   border: none; 
+    cursor: pointer; 
+    display: block; 
+    margin-top: 10px;
+    text-align: center;
+  }
+ .ship_icon{
+  width: 3rem;
+ }
+ .detail_content_product_desc{
+  width: 45rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+ }

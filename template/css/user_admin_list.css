@@ -1,0 +1,87 @@
+.admin_body {
+    padding: 20px;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+
+.admin_body h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.admin_body a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: rgb(15, 109, 223);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.admin_body a:hover {
+    background-color: #1bce38;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 1.6rem;
+}
+
+tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    font-size: 1.6rem;
+}
+
+tbody tr:hover {
+    background-color: #c9c3c3;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+   
+    margin-right: 5px;
+}
+
+tbody td img {
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+td a {
+    margin-right: 10px;
+}
+
+td a:hover {
+    opacity: 0.7;
+}
+
+td a img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Nút xóa có nền màu đỏ */
+td a:nth-of-type(2) {
+    background-color: red;
+}
+
+/* Hover cho nút xóa */
+td a:nth-of-type(2):hover {
+    background-color: rgb(105, 15, 15);
+}
