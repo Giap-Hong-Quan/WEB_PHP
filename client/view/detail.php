@@ -1,22 +1,22 @@
 <main>
         <div class="container">
             <div class="detail">
-                <div class="detail_img">
-                    <div class="detail_img_main">
-                        <img src="../template/img/nuochoa.webp" alt="">
-                    </div>
-                    <div class="detail_img_extra">
-                    <?php
-                    if($sqlImageDetail):
-                    foreach($sqlImageDetail as $item):
-                    ?>
-                        <img src="../template/img/<?php echo $item['image']?>" alt="">
-                    <?php
-                        endforeach;
-                    endif;
-                    ?>
-                    </div>
-                </div>
+            <div class="detail_img">
+    <div class="detail_img_main">
+        <!-- Hiển thị ảnh đầu tiên của mảng khi mới vào -->
+        <img id="mainImage" 
+             src="../template/img/<?php echo $sqlImageDetail[0]['image']; ?>" 
+             alt="Ảnh sản phẩm">
+    </div>
+    <div class="detail_img_extra">
+        <?php if ($sqlImageDetail): ?>
+            <?php foreach ($sqlImageDetail as $item): ?>
+                <!-- Mỗi ảnh nhỏ có sự kiện onclick để thay đổi ảnh lớn -->
+                <img src="../template/img/<?php echo $item['image'] ?>" alt="" onclick="changeMainImage(this)">
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+</div>
                 <?php
                 if($sqlSelectDetail):
                   
@@ -62,3 +62,10 @@
     
         </div>
     </main>
+    <script>
+    function changeMainImage(smallImg) {
+        // Thay đổi src của ảnh lớn thành src của ảnh nhỏ được nhấp vào
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = smallImg.src;
+    }
+    </script>

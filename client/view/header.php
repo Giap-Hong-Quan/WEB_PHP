@@ -109,7 +109,10 @@
         <h2 class="modal_heading">Thông tin của tôi</h2>
         <div class="modal_name">Tên:<?php echo $sqlUser['name']?></div>
         <div class="modal_email">Email:<?php echo $sqlUser['email']?></div>
-        <a class="btn_admin" href="../admin/?mod=product&act=list"><?php echo ($sqlUser['admin']==1)?'ADMIN':''?></a>
+        <?php if ($sqlUser['admin'] == 1): ?>
+        <a class="btn_admin" href="../admin/?mod=product&act=list">ADMIN</a>
+        <?php endif; ?>
+
         <a class="btn_logout" href="">Đăng xuất</a>
     </div>
   </div>
