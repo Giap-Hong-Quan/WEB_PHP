@@ -9,7 +9,7 @@
         <div class="container">
        
             <div class="banner">
-                <img class="banner1" src="../../../thuedo/template/img/banner1.png" alt="">
+                <img class="banner1 active" src="../../../thuedo/template/img/banner1.png" alt="">
                 <img class="banner1" src="../../../thuedo/template/img/banner2.png" alt="">
                 <img class="banner1" src="../../../thuedo/template/img/banner3.png" alt="">
             </div>
@@ -137,3 +137,13 @@
             </section>
         </div>
     </main>
+    <script>
+    let currentIndex = 0; // Chỉ số ảnh hiện tại
+    const images = document.querySelectorAll('.banner img'); // Lấy tất cả ảnh
+
+    setInterval(() => {
+        images[currentIndex].classList.remove('active'); // Ẩn ảnh hiện tại
+        currentIndex = (currentIndex + 1) % images.length; // Chuyển sang ảnh tiếp theo (lặp lại từ đầu nếu hết ảnh)
+        images[currentIndex].classList.add('active'); // Hiển thị ảnh mới
+    }, 1000); // Thời gian chuyển slide là 1 giây
+</script>

@@ -23,7 +23,7 @@
                 ?>
                 <div class="detail_content">
                     <div class="detail_content_product">
-                        <h1 class="detail_content_product_brand"><?php
+                        <h1 class="detail_content_product_brand">Thương Hiệu :<?php
                         switch($sqlSelectDetail['id_brand']){
                             case 1:
                                 echo 'DIOR';
@@ -37,7 +37,7 @@
                         }
                         ?></h1>
                         <h2 class="detail_content_product_name"><?php echo $sqlSelectDetail['name']?></h2>
-                        <span class="detail_content_product_ma"><?php echo $sqlSelectDetail['id']?></span>
+                        <span class="detail_content_product_ma">Mã Sản Phẩm :<?php echo $sqlSelectDetail['id']?></span>
                         <span class="detail_content_product_price"><?php echo $sqlSelectDetail['price']?>đ</span>
                         <span class="detail_content_product_desc"><?php echo $sqlSelectDetail['description']?></span>
                         <span class="detail_content_product_sale">Promotion:Mã giảm giá</span>

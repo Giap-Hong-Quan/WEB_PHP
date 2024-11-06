@@ -77,8 +77,14 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0; /* Ẩn tất cả ảnh */
+        transition: opacity 0.5s ease;
  
   }
+  .banner img.active {
+    opacity: 1; /* Hiển thị ảnh hiện tại */
+    z-index: 1; /* Đảm bảo ảnh hiện tại nằm trên cùng */
+}
   /* */
   .home__container {
       margin-top:7rem;
