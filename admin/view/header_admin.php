@@ -15,6 +15,10 @@
                 <p>Trang Quản Trị Viện Website NOVA</p>
                 <div class="admin_user">
                     <p><img class="admin_con" src="../template/icon/bell.svg" alt=""></p>
-                    <p><img class="admin_con" src="../template/img/avatar.png" alt=""></p>
+                    <a href="../client/?mod=page&act=dashboard&id=60">
+
+                        <p><img class="admin_con" src="../template/img/avatar.png" alt=""></p>
+                    </a>
                 </div>
             </div>
+            
