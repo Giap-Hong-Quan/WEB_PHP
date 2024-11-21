@@ -113,7 +113,7 @@
         <a class="btn_admin" href="../admin/?mod=product&act=list">ADMIN</a>
         <?php endif; ?>
 
-        <a class="btn_logout" href="">Đăng xuất</a>
+        <a class="btn_logout" href="../client/?mod=user&act=login">Đăng xuất</a>
     </div>
   </div>
 </div>
